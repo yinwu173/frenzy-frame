@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 
-import App from './App';
-
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
 import AboutPage from "./pages/AboutPage";
 import ResumePage from "./pages/ResumePage";
 import ContactPage from "./pages/ContactPage";
+import NavTabs from "./components/NavTabs";
 
 
 function App() {
@@ -33,7 +32,8 @@ function App() {
 
     return (
         <div>
-            <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+            <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+            <Header />
             <div>
                 <main>{renderPage()}</main>
             </div>
